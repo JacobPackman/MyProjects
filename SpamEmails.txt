@@ -1,0 +1,7 @@
+$policy = " "
+$sender = " "
+$user = " "
+Connect-ExchangeOnline
+Get-InboxRule -Mailbox $user
+Set-HostedContentFilterPolicy -Identity "$policy" -BlockedSenders @{add="$sender"}
+Get-HostedContentFilterPolicy -Identity "$policy" | Select -ExpandProperty BlockedSenders
