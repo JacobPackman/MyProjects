@@ -41,15 +41,15 @@ def cost():
     total = pc_cost + dock_cost + cables_cost + monitors_cost + accessories_cost
     
     if pc_cost > 0:
-        print("\n\n\tThe cost of the PC is ${}".format(pc_cost))
+        print("\n\n\tThe cost of the PC is ${:.2f}".format(pc_cost))
     if dock_cost > 0:
-        print ("\tThe cost of the dock is ${}".format(dock_cost))
+        print ("\tThe cost of the dock is ${:.2f}".format(dock_cost))
     if cables_cost > 0:
-        print("\tThe cost of the cables is ${}".format(cables_cost))
+        print("\tThe cost of the cables is ${:.2f}".format(cables_cost))
     if monitors_cost > 0:
-        print("\tThe cost of the monitors is ${}".format(monitors_cost))
+        print("\tThe cost of the monitors is ${:.2f}".format(monitors_cost))
     if accessories_cost > 0:
-        print("\tThe cost of all other accessories is ${}".format(accessories_cost))
-    print("\tThe total is ${}".format(total))
+        print("\tThe cost of all other accessories is ${:.2f}".format(accessories_cost))
+    print("\tThe total is ${:.2f}".format(total))
         
 cost()
