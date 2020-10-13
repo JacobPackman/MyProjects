@@ -37,9 +37,17 @@ def cost():
         accessories_cost = 0
     else:
         accessories_cost = cust_cost(float(monitors))
-
-    total = pc_cost + dock_cost + cables_cost + monitors_cost + accessories_cost
     
+    onsite_labor = input("Enter estimated onsite labor hours: ")
+    if onsite_labor == "":
+        onsite_cost = 0
+    else:
+        onsite_cost = float(onsite_labor) * 125
+
+
+    total_material = pc_cost + dock_cost + cables_cost + monitors_cost + accessories_cost
+    total_trip = total_material + 250 + 65 + onsite_cost
+
     if pc_cost > 0:
         print("\n\n\tThe cost of the PC is ${:.2f}".format(pc_cost))
     if dock_cost > 0:
@@ -50,6 +58,8 @@ def cost():
         print("\tThe cost of the monitors is ${:.2f}".format(monitors_cost))
     if accessories_cost > 0:
         print("\tThe cost of all other accessories is ${:.2f}".format(accessories_cost))
-    print("\tThe total is ${:.2f}".format(total))
+    print("\tThe total cost of materials is ${:.2f}".format(total_material))
+    print("\tThe estimated time onsite would be {} hours and the charge for that is ${:.2f}".format(onsite_labor, onsite_cost))
+    print("\tThe total cost of provisioning, trip charge and onsite labor is ${:.2f}".format(total_trip))
         
 cost()
