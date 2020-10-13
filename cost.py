@@ -4,56 +4,52 @@ def cust_cost(unit):
 
 def cost():
     pc = input("Enter the cost of the PC: ")
-    pc_cost = cust_cost(pc)
-    
+    if pc == "":
+        pc = 0
+        pc_cost = 0
+    else:
+        pc_cost = cust_cost(float(pc))
+
     dock = input("Enter the cost of the dock: ")
-    dock_cost = cust_cost(dock)
+    if dock == "":
+        dock = 0
+        dock_cost = 0
+    else:
+        dock_cost = cust_cost(float(dock))
 
     cables = input("Enter the cost of the cables: ")
-    cables_cost = cust_cost(cables)
+    if cables == "":
+        cables = 0
+        cables_cost = 0
+    else:
+        cables_cost = cust_cost(float(cables))
 
     monitors = input("Enter the cost of the monitors: ")
-    monitors_cost = cust_cost(monitors)
+    if monitors == "":
+        monitors = 0
+        monitors_cost = 0
+    else:
+        monitors_cost = cust_cost(float(monitors))
 
     accessories = input("Enter the cost of all miscellaneous accessories: ")
-    accessories_cost = cust_cost(accessories)
+    if accessories == "":
+        accessories = 0
+        accessories_cost = 0
+    else:
+        accessories_cost = cust_cost(float(monitors))
 
     total = pc_cost + dock_cost + cables_cost + monitors_cost + accessories_cost
-    print(" The cost of the PC is {}.\n The cost of the dock is {}.\n The cost of the cabling is {}.\n The cost of the monitors is {}.\n The cost of all other accessories is {}.\n The total is {}".format(pc_cost, dock_cost, cables_cost, monitors_cost, accessories_cost, total))
-
+    
+    if pc_cost > 0:
+        print("\n\n\tThe cost of the PC is ${}".format(pc_cost))
+    if dock_cost > 0:
+        print ("\tThe cost of the dock is ${}".format(dock_cost))
+    if cables_cost > 0:
+        print("\tThe cost of the cables is ${}".format(cables_cost))
+    if monitors_cost > 0:
+        print("\tThe cost of the monitors is ${}".format(monitors_cost))
+    if accessories_cost > 0:
+        print("\tThe cost of all other accessories is ${}".format(accessories_cost))
+    print("\tThe total is ${}".format(total))
+        
 cost()
-
-"""
-if pc >= 0:
-    print(f"The cost of the pc is {pc}")
-else:
-    pass
-
-if dock >= 0:
-    print(f"The cost of the dock is {dock}")
-else: 
-    pass
-
-if cables >= 0:
-    print(f"The cost of the cables is {cables}")
-else: 
-    pass
-
-if monitors >= 0:
-    print(f"The cost of the monitors is {monitors}")
-else: 
-    pass
-
-if accessories >= 0:
-    print(f"The cost of the accessories is {accessories}")
-else: 
-    pass
-
-print(f"The total is {total} before tax.")
-"""
-
-
-
-
-
-
