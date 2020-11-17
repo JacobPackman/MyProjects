@@ -1,0 +1,63 @@
+Set-Variable DEFAULT "C:\Users\JacobPackman\Documents\WindowsPowershell\Scripts"
+
+cd $DEFAULT
+
+Set-Variable git "C:\Users\JacobPackman\Documents\WindowsPowershell\Scripts"
+
+Set-Variable desktop "C:\Users\JacobPackman\OneDrive - VDI Communications, Inc\Desktop"
+
+Set-PSReadLineKeyHandler -Chord Shift+Spacebar -Function SelfInsert
+
+Function ENTER-VDFS {Enter-PSSession -ComputerName vdi-fs01 -Credential administrator@vdi-inc.com } 
+Set-Alias vdfs -Value ENTER-VDFS
+
+Function ENTER-VDDC {Enter-PSSession -ComputerName vdi-dc01 -Credential administrator@vdi-inc.com } 
+Set-Alias vddc -Value ENTER-VDDC
+
+Function ENTER-TCDC {Enter-PSSession -ComputerName tcc-dc01 -Credential jacobvdi@texascontract.net}
+Set-Alias tcdc -Value ENTER-TCDC
+
+Function ENTER-TCFS {Enter-PSSession -ComputerName tcc-FS01 -Credential jacobvdi@texascontract.net}
+Set-Alias tcfs -Value ENTER-TCFS
+
+Function ENTER-STDC {Enter-PSSession -ComputerName str-dc01 -Credential jacobvdi@sterling-relo.local}
+Set-Alias stdc -Value ENTER-STDC
+
+Function ENTER-STFS {Enter-PSSession -ComputerName str-fs01 -Credential jacobvdi@sterling-relo.local}
+Set-Alias stfs -Value ENTER-STFS
+
+Function ENTER-RCDC {Enter-PSSession -ComputerName RMC-dc01 -Credential admin@rockwellmgmt.local}
+Set-Alias rcdc -Value ENTER-RCDC
+
+Function ENTER-RCFS {Enter-PSSession -ComputerName RMC-FS01 -Credential admin@rockwellmgmt.local}
+Set-Alias rcfs -Value ENTER-RCFS
+
+Function ENTER-COFS {Enter-PSSession -ComputerName zcfila-txcosc -Credential vdiadmin@txcosc.local}
+Set-Alias cofs -Value ENTER-COFS
+
+Function ENTER-CODC {Enter-PSSession -ComputerName zuadsa-txcosc -Credential vdiadmin@txcosc.local}
+Set-Alias codc -Value ENTER-CODC
+
+Function ENTER-TNPLH {Enter-PSSession -ComputerName tnplhserver1 -Credential vdiadmin@tnplh.com}
+Set-Alias tnplh -Value ENTER-TNPLH
+
+Function EXCH-TCC { connect-exchangeonline -userprincipalname vdiadmin@texascontract.net } 
+set-alias tccexc -Value EXCH-TCC
+
+Function EXCH-STR { connect-exchangeonline -userprincipalname vdiadmin@sterlingch.com } 
+set-alias strexc -Value EXCH-STR
+
+Function EXCH-COSC { connect-exchangeonline -userprincipalname vdiadmin@crystalosc.com } 
+set-alias coscexc -Value EXCH-COSC
+
+Function EXCH-LWM { connect-exchangeonline -userprincipalname vdiadmin@laynewatermidstream.com } 
+set-alias lwmexc -Value EXCH-LWM
+
+Function EXCH-LWM { connect-exchangeonline -userprincipalname vdiadmin@laynewatermidstream.com } 
+set-alias lwmexc -Value EXCH-LWM
+
+Function STR-EXCKEL { C:\Users\JacobPackman\Documents\WindowsPowershell\Scripts\MyProjects\Add-KellyEmail.ps1 }
+set-alias add-kellymail -value STR-EXCKEL
+
+Function TCC-HUB { C:\Users\JacobPackman\Documents\WindowsPowershell\Scripts\MyProjects\Add-HubUser.ps1 } 
+set-alias add-hubuser -value TCC-HUB
