@@ -1,7 +1,2 @@
-param (
-    $user = "lparra"
-)
-$secure = Read-Host "Please enter PW" -AsSecureString
-Set-ADAccountPassword -Identity $user -NewPassword $secure -Reset
-Set-AdUser -Identity $user -ChangePasswordAtLogon $TRUE
-Start-AdSyncSyncCycle -PolicyType Delta
+$user = read-host "Enter username" 
+Set-ADAccountPassword -Identity $user -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "#ChangeMe" -Force); Set-ADUser -Identity $user -ChangePasswordAtLogon $true
