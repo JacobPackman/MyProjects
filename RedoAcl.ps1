@@ -15,4 +15,3 @@ foreach ($fol in $folders) {
     $acl.AddAccessRule($NewAccessRule)
     Set-Acl -path $fol -AclObject $acl
 }
-}
