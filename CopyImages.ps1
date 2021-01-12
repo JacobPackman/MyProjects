@@ -8,6 +8,6 @@ foreach ($fol in $folders) {
     if ( (Test-Path $BackupFolderName) -eq $true)
         {Copy-Item ($fol).FullName -Destination $BackupFolderName}
     else 
-        { mkdir $BackupFOlderName; 
+        { mkdir $BackupFolderName; 
           cp ($fol).FullName -Destination $BackupFolderName }
 } 
