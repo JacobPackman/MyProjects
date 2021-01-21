@@ -1,4 +1,5 @@
 write-host "### CONNECT TO EXCHANGE FIRST! ###"
 $email = read-host "Enter email given by end user" 
-Set-HostedContentFilterPolicy -Identity Default -BlockedSenders @{add="$email"}
-Get-HostedContentFilterPolicy -Identity Default | Select -Expand BlockedSenders
+$id = (Get-HostedContenFilterPolicy | ? {$_.IsDefault -eq $TRUE}).Id
+Set-HostedContentFilterPolicy -Identity $id -BlockedSenders @{add="$email"}
+Get-HostedContentFilterPolicy -Identity $id | Select -Expand BlockedSenders
