@@ -45,7 +45,7 @@ def cost():
         accessories_cost = 0
     else:
         accessories = accessories.replace(",","")
-        accessories_cost = cust_cost(float(monitors))
+        accessories_cost = cust_cost(float(accessories))
     
     onsite_labor = input("Enter estimated onsite labor hours: ")
     if onsite_labor == "":
@@ -72,7 +72,7 @@ def cost():
     print("\tThe total cost of materials is ${:.2f}".format(total_material))
     if onsite_cost > 0:
         print("\tThe estimated time onsite would be {} hours and the charge for that is ${:.2f}".format(onsite_labor, onsite_cost))
-    print("\tThe cost of provisioning the machine and trip charge is ${:.2f}".format(trip_charge))
+    print("\tThe cost of provisioning the machine is $250 and trip charge is $65, for a total of ${:.2f}".format(trip_charge))
     print("\tThe total cost of all material and labor is ${:.2f}".format(total_all))
         
 cost()
