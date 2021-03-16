@@ -14,24 +14,33 @@ B0-AD-AA-2B-98-48   48 Self
 00-23-24-9E-61-D3   64 Dynamic Unit:1 Port:27
 """
 class SortList:
-    def __init__(self, macadd, ports, list, test=test)
-    self.macadd = macadd
-    self.ports = ports
-    self.test = test
-    self.list = list
+    def __init__(self, macadd, ports, list, test=test):
+        self.macadd = macadd
+        self.ports = ports
+        self.test = test
+        self.list = list
 
     def getMacAddresses(test):
-        macadd = re.findall(r"(?:\S{2}\-){4}\S{2}", arg)
+        macadd = re.findall(r"(?:\S{2}\-){4}\S{2}", test)
+#        print(macadd)
         return macadd
     
 
     def getPorts(test):
-        ports = re.findall("(?:Self)|(?:Dynamic Unit:.*)", arg)
+        ports = re.findall("(?:Self)|(?:Dynamic Unit:.*)", test)
+#        print(ports)
+        return ports
 
-    def createList()        
+    def createList(test):
+        list = {}
+        ports1 = getPorts(test)
+        #test1 = SortList.getMacAddresses(test)
+        #for x,y in zip(ports,macadd):
+        #    list[x] = y
+        print(pots1)
 
-getPorts(test)
-getMacAddresses(test)
+
+SortList.createList(test)
 
 #list = dict(zip(macadd,ports))
 #for i in sorted(dict):
