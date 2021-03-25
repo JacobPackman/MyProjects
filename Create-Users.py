@@ -1,24 +1,12 @@
 
-unCompile = """Angela Mattioda,VRnp8Hm
-Aleta Paul,uvfPm52
-Michelle McCord,bAS6gaS
-Maggie Raesz,9i6afPX
-Krissy Eggemeyer,D5KJWii
-Alicia Cortez,Pe4dSU6
-Lea Young,qvTPR2Z
-Crissy Bates,uM3qwTC
-Jeremy Parlington,8LdAGch
-Liza Avina,3oqs6DU
-Lori Bahr,nzv93eD
-Mark Binder,iA6Rpeb
-Katryna Yaworski,hEA4nm4
-Samantha Adams,4hpDDwn
-Sarah Rodriguez,77Euub3
-Janine Nelms,9eLPhcn
-Amy Miller,8xNJNe3
-Jordan Hawkins,W4Srzs8
-Jocelyn Preston,g78PRhs
-James Webster,8ihbcZL"""
+unCompile = """Anthony Loneliano,Rand0Num
+Biggus Dickus,Rand0Num
+Nick Mullen,Rand0Num
+Stavvy Baby,Rand0Num
+Jeff Mangum,Rand0Num
+Alexandria Ocasio Cortez,Rand0Num
+Hakeem Olajuwon,Rand0Num
+Kareem Abdul-Jabbar,Rand0Num"""
 
 Compile = dict(x.split(",") for x in unCompile.split("\n"))
 
